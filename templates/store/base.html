@@ -16,6 +16,92 @@
 @import url('https://fonts.googleapis.com/css2?family=spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -57,6 +143,31 @@ p {
 
 .section-m1 {
     margin: 40px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
 }
 
 body {
@@ -274,6 +385,172 @@ body {
         right: 10px;
     }
 
+    #banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url("https://img.freepik.com/free-vector/frame-with-dogs-vector-white-background_53876-127700.jpg?w=2000");
+        width: 100%;
+        height: 40vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #banner h4{
+        font-size: 16px;
+    }
+
+    #banner h2{
+        font-size: 30px;
+        padding: 10px 0;
+    }
+
+    #banner h2 span{
+        color: darkred;
+    }
+
+    #sm-banner{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #sm-banner .banner-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        background-image: url("https://media.istockphoto.com/id/1352316901/photo/cute-tabby-kitten-on-yellow-background-baby-animal.jpg?s=612x612&w=0&k=20&c=EHuJNFQbK4sJ-XUp-_EFP33d_xwJVn50tM3OZrDfeD8=");
+        min-width: 800px;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        padding: 30px;
+    }
+
+    #sm-banner .banner-box2{
+        background-image: url("https://img.freepik.com/fotos-gratis/vista-frontal-de-um-lindo-cachorro-com-espaco-de-copia_23-2148786499.jpg?w=2000");
+    }
+
+    #sm-banner h4{
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    #sm-banner h2{
+        color: white;
+        font-size: 28px;
+        font-weight: 800;
+    }
+
+    #sm-banner span{
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    #sm-banner .banner-box:hover button{
+        background-color: darkred;
+        border: 1px solid darkred;
+    }
+
+    #banner3{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 80px;
+    }
+
+    #banner3 .banner-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-642994806-1625762504.jpg?crop=1.00xw:0.751xh;0,0.110xh&resize=1200:*");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #banner3 .banner-box2{
+        background-image: url("https://img.buzzfeed.com/buzzfeed-static/static/2021-05/6/14/asset/94036a0af5b2/sub-buzz-9814-1620311649-30.jpg");
+    }
+
+    #banner3 .banner-box3{
+        background-image: url("https://media-be.chewy.com/wp-content/uploads/MAR-7536_BLOG_HamsterToys_120518_SE1165_1200x675-1024x576.jpg");
+    }
+
+    #banner3 h2{
+        color: #fff;
+        font-weight: 900;
+        font-size: 22px;
+    }
+
+    #banner3 h3{
+        color: #ff2727;
+        font-weight: 800;
+        font-size: 22px;
+    }
+
+    #newsletter{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        background-image: url("https://www.petlers.com/wp-content/uploads/2021/04/front-view-beautiful-dog-with-copy-space.jpg");
+        background-repeat: no-repeat;
+        background-position: 20% 30%;
+        background-color: #041e42;
+    }
+
+    #newsletter h4{
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    #newsletter p{
+        font-size: 14px;
+        font-weight: 600;
+        color: darkred;
+    }
+
+    #newsletter p span{
+        color: white;
+    }
+
+    #newsletter .form{
+        display: flex;
+        width: 40%;
+    }
+
+    #newsletter input{
+        height: 3.125rem;
+        padding: 0 1.25em;
+        font-size: 14px;
+        width: 100%;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        outline: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    #newsletter button{
+        background-color: darkred;
+        color: #fff;
+        white-space: nowrap;
+    }
+
+
 
 </style>
 
@@ -467,7 +744,217 @@ body {
 
     <section id="banner">
         <h4>Farmácia Pet</h4>
-        <h2>Seu pet</h2>
+        <h2>Mantenha <span>Seu Pet</span> Saudável como nunca!</h2>
+        <button class="normal" role="button">Ir para farmácia!</button>
     </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Mais Vendidos</h2>
+        <p>A coleção de verão</p>
+        <div class="container-produto">
+            <div class="pro">
+                <img src="https://comedouropet.com.br/wp-content/uploads/2022/10/AnyConv.com__comedouro-duplo-gourmetpot-colors.webp" alt="">
+                <div class="description">
+                    <span>Nike</span>
+                    <h5>Pote de Comida Personalizado</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>120R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://static3.tcdn.com.br/img/img_prod/496822/cama_bichinho_chic_aconchego_marron_26687_1_20201016190000.jpg" alt="">
+                <img src="https://static3.tcdn.com.br/img/img_prod/496822/cama_bichinho_chic_aconchego_marron_26687_2_20201016190001.jpg" alt="">
+                <div class="description">
+                    <span>Chic</span>
+                    <h5>Cama Bichinho Chic Aconchego Marron</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>131R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://images.tcdn.com.br/img/img_prod/496822/casinha_furacao_pet_de_plastico_amarelo_8711_4_20200528000649.jpg" alt="">
+                <div class="description">
+                    <span>Vindi</span>
+                    <h5>Casa de cachorro Furacão Pet de Plástico</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>102R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://images.tcdn.com.br/img/img_prod/496822/peitoral_e_guia_deg_para_caes_estampado_26701_1_20201103233027.png" alt="">
+                <div class="description">
+                    <span>D&G</span>
+                    <h5>Peitoral e Guia D&G para Cães Estampado</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>113R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://images.tcdn.com.br/img/img_prod/496822/brinquedo_arranhador_yanpet_mini_poste_para_filhotes_joaninha_9909_1_8fe7da89dc42bd13fca40a4144108a90.jpg" alt="">
+                <div class="description">
+                    <span>Vindi</span>
+                    <h5>Arranhador Mini Poste para Filhotes</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>40R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://static3.tcdn.com.br/img/img_prod/496822/coleira_elastica_p_gatos_c_pingente_guizo_conjunto_com_10uni_12397_1_20190708232228.jpg" alt="">
+                <div class="description">
+                    <span>D&G</span>
+                    <h5>Coleira Elástica para Gatos com Pingente ou Guizo (Unidade)</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>9,90R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://static3.tcdn.com.br/img/img_prod/496822/rasqueadeira_n_04_gigante_ref_0053_11573_1_20190614170719.jpg" alt="">
+                <div class="description">
+                    <span>American Pets</span>
+                    <h5>Rasqueadeira N.04 Gigante</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>20,90R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://images.tcdn.com.br/img/img_prod/496822/fonte_gato_duracats_bivolts_2_5_lts_azul_12587_1_20190708211513.jpg" alt="">
+                <div class="description">
+                    <span>Durapets</span>
+                    <h5>Fonte Cães e Gatos Bivolts 2,5 Lts Azul</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>99,90R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>O patrão ficou louco!</h4>
+            <h2>Pague 1 leve 2</h2>
+            <span>O melhor para seu pet em uma loja!</span>
+            <button class="white" style="margin: 10px">Saiba Mais!</button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>Projeto Verão</h4>
+            <h2>Seu pet no calor</h2>
+            <span>O melhor para seu pet em uma loja!</span>
+            <button class="white" style="margin: 10px">Nova Coleção</button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>Ofertas da semana!</h2>
+            <h3>Brinquedos com até -60% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2">
+            <h2>Ofertas da semana!</h2>
+            <h3>Brinquedos com até -60% OFF</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>Ofertas da semana!</h2>
+            <h3>Brinquedos com até -60% OFF</h3>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4>Assine para noticías!</h4>
+            <p>Receba E-mails e atualizações sobre <span>promoções</span> para os pets.</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Digite seu e-mail">
+            <button class="normal">Assinar</button>
+        </div>
+    </section>
+
+		<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="#">Home</a>
+
+					<a href="#">Loja</a>
+
+					<a href="#">Blog</a>
+
+					<a href="#">Sobre</a>
+
+					<a href="#">Contato</a>
+
+				</p>
+
+				<p>Copyright Victor Menendes 2022</p>
+			</div>
+
+		</footer>
+
 </body>
 </html>
