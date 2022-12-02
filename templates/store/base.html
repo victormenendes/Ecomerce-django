@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{% block title %}Chapokas{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
@@ -12,32 +13,268 @@
 
 <style>
 
-    #header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 80px;
-        background-color: #E3E6F3;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    }
+@import url('https://fonts.googleapis.com/css2?family=spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-    #navbar{
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222
+}
+
+h4 {
+    font-size: 20px;
+    color: #222
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #222
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: darkred;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: darkred;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+    .button-36 {
+  background-image: linear-gradient(92.88deg, #a90023 9.16%, #af0a2e 43.89%, #a8002b 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 10px;
+}
+
+.button-36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+    #hero{
+        background-image: url("https://www.pngitem.com/pimgs/m/209-2097687_cropped-pets-edited-rev2-keep-pets-hd-png.png") ;
+        height: 90vh;
+        width: 100%;
+        background-size: cover;
+        background-position: top 25% right 0;
+        padding: 0 80px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: center;
     }
 
-    #navbar li{
-        list-style: none;
-        padding: 0 20px;
+    #hero h4{
+        padding-bottom: 15px;
     }
 
-#navbar li a{
-        text-decoration: none;
-        color: #1a1a1a;
-        font-size: 16px;
-        font-weight: 600;
+    #hero h1{
+        color: darkred;
     }
+
+    #conteudo .fe-box{
+        width: 180px;
+        text-align: center;
+        padding: 25px 15px;
+        box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+        border: 1px solid #e8cfd5;
+        border-radius: 4px;
+        margin: 15px 0;
+    }
+
+    #feature .fe-box:hover {
+        box-shadow: 10px 10px 54px rgb(175, 10, 46);
+    }
+
+    #conteudo .fe-box img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #conteudo .fe-box h6{
+        display: inline-block;
+        padding: 9px 8px 6px 8px;
+        line-height: 1;
+        border-radius: 4px;
+        color: darkred;
+        background-color: #f8e8e9;
+    }
+
+    #conteudo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #product1{
+        text-align: center;
+    }
+
+    #product1 .container-produto{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    #product1 .pro{
+        width: 23%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border: 1px solid #e8cfd5;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
+    }
+
+    #product1 .pro:hover {
+        box-shadow: 20px 20px 30px rgb(0, 0, 0, 0.06);
+    }
+
+    #product1 .pro img{
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #product1 .pro .description{
+        text-align: start;
+        padding: 10px 0;
+    }
+
+    #product1 .pro .description span{
+        color: #606063;
+        font-size: 12px;
+    }
+
+    #product1 .pro h5{
+        padding-top: 7px;
+        color: #1a1a1a;
+        font-size: 14px;
+    }
+
+    #product1 .pro .description i{
+        font-size: 12px;
+        color: rgb(243, 181, 25);
+    }
+
+    #product1 .pro .description h4{
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: darkred;
+    }
+
+    #product1 .pro .cart{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50px;
+        background-color: #f8e8e9;
+        font-weight: 500;
+        color: darkred;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+
+
 </style>
 
 <body>
@@ -47,7 +284,7 @@
 
             <div>
                 <ul id="navbar">
-                    <li><a href="base.html">Home</a></li>
+                    <li><a class="active" href="base.html">Home</a></li>
                     <li><a href="loja.html">Loja</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
@@ -55,6 +292,182 @@
                     <li><a href="carrinho.html"><i class="fa-thin fa-bag-shopping"></i></a></li>
                 </ul>
             </div>
+    </section>
+
+    <section id="hero">
+        <h4>Oferta-do-Momento</h4>
+        <h2>Os Melhores Valores</h2>
+        <h1>Para os Melhores Produtos</h1>
+        <p>Ganhe mais de 70% de desconto em compras!</p>
+        <button class="button-36" role="button">Ir as Compras!</button>
+    </section>
+
+    <section id="conteudo" class="section-p1">
+        <div class="fe-box">
+            <img src="https://cdn.simplo7.net/static/37412/galeria/155681041950147.png" alt="" style="height: 150px; width: 150px;">
+            <h6>Frete grátis para todo Brasil</h6>
+        </div>
+        <div class="fe-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2558/2558180.png" alt="" style="height: 150px; width: 150px;">
+            <h6>Compra Online</h6>
+        </div>
+        <div class="fe-box">
+            <img src="http://cdn.onlinewebfonts.com/svg/img_548764.png" alt="" style="height: 150px; width: 150px;">
+            <h6>Salve Dinheiro</h6>
+        </div>
+        <div class="fe-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/372/372754.png" alt="" style="height: 150px; width: 150px;">
+            <h6>Promoções</h6>
+        </div>
+        <div class="fe-box">
+            <img src="data:image/png;base64,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" alt="" style="height: 150px; width: 150px;">
+            <h6>Faça seu pet feliz</h6>
+        </div>
+        <div class="fe-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/78/78925.png" alt="" style="height: 150px; width: 150px;">
+            <h6>F24/7 Suporte</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Mais Vendidos</h2>
+        <p>A coleção de verão</p>
+        <div class="container-produto">
+            <div class="pro">
+                <img src="https://comedouropet.com.br/wp-content/uploads/2022/10/AnyConv.com__comedouro-duplo-gourmetpot-colors.webp" alt="">
+                <div class="description">
+                    <span>Nike</span>
+                    <h5>Pote de Comida Personalizado</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>120R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://static3.tcdn.com.br/img/img_prod/496822/cama_bichinho_chic_aconchego_marron_26687_1_20201016190000.jpg" alt="">
+                <img src="https://static3.tcdn.com.br/img/img_prod/496822/cama_bichinho_chic_aconchego_marron_26687_2_20201016190001.jpg" alt="">
+                <div class="description">
+                    <span>Chic</span>
+                    <h5>Cama Bichinho Chic Aconchego Marron</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>131R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://images.tcdn.com.br/img/img_prod/496822/casinha_furacao_pet_de_plastico_amarelo_8711_4_20200528000649.jpg" alt="">
+                <div class="description">
+                    <span>Vindi</span>
+                    <h5>Casa de cachorro Furacão Pet de Plástico</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>102R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://images.tcdn.com.br/img/img_prod/496822/peitoral_e_guia_deg_para_caes_estampado_26701_1_20201103233027.png" alt="">
+                <div class="description">
+                    <span>D&G</span>
+                    <h5>Peitoral e Guia D&G para Cães Estampado</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>113R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://images.tcdn.com.br/img/img_prod/496822/brinquedo_arranhador_yanpet_mini_poste_para_filhotes_joaninha_9909_1_8fe7da89dc42bd13fca40a4144108a90.jpg" alt="">
+                <div class="description">
+                    <span>Vindi</span>
+                    <h5>Arranhador Mini Poste para Filhotes</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>40R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://static3.tcdn.com.br/img/img_prod/496822/coleira_elastica_p_gatos_c_pingente_guizo_conjunto_com_10uni_12397_1_20190708232228.jpg" alt="">
+                <div class="description">
+                    <span>D&G</span>
+                    <h5>Coleira Elástica para Gatos com Pingente ou Guizo (Unidade)</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>9,90R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://static3.tcdn.com.br/img/img_prod/496822/rasqueadeira_n_04_gigante_ref_0053_11573_1_20190614170719.jpg" alt="">
+                <div class="description">
+                    <span>American Pets</span>
+                    <h5>Rasqueadeira N.04 Gigante</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>20,90R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://images.tcdn.com.br/img/img_prod/496822/fonte_gato_duracats_bivolts_2_5_lts_azul_12587_1_20190708211513.jpg" alt="">
+                <div class="description">
+                    <span>Durapets</span>
+                    <h5>Fonte Cães e Gatos Bivolts 2,5 Lts Azul</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>99,90R$</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner">
+        <h4>Farmácia Pet</h4>
+        <h2>Seu pet</h2>
     </section>
 </body>
 </html>
